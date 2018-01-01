@@ -1,0 +1,9 @@
+version: "2"
+services:
+  groestlcoin:
+    container_name: groestlcoin
+    build: .
+    ports:
+      - "1331:1331"
+    volumes:
+      - /var/groestlcoin:/home/grs/.groestlcoin
