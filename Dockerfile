@@ -23,8 +23,11 @@ WORKDIR /tmp/groestlcoin
 RUN ./autogen.sh \
     && ./configure \
     && make \
-    && make install \
-    && rm -rf .
+    && make install
+
+WORKDIR /
+
+RUN rm -rf /tmp/groestlcoin
 
 EXPOSE 1331
 
